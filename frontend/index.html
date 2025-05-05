@@ -4,63 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candy Store Manager</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #ff6f61;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        main {
-            padding: 2rem;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-        }
-        th {
-            background-color: #ff6f61;
-            color: white;
-        }
-        .btn {
-            padding: 0.5rem 1rem;
-            background-color: #ff6f61;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .btn:hover {
-            background-color: #e55a50;
-        }
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/util.js" defer></script>
 </head>
 <body>
     <header>
@@ -94,33 +39,5 @@
             </tbody>
         </table>
     </main>
-
-    <script>
-        const form = document.getElementById('addCandyForm');
-        const inventoryTable = document.getElementById('inventoryTable');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const candyName = document.getElementById('candyName').value;
-            const candyQuantity = document.getElementById('candyQuantity').value;
-
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${candyName}</td>
-                <td>${candyQuantity}</td>
-                <td><button class="btn btn-delete">Elimina</button></td>
-            `;
-
-            const deleteButton = row.querySelector('.btn-delete');
-            deleteButton.addEventListener('click', function() {
-                row.remove();
-            });
-
-            inventoryTable.appendChild(row);
-
-            form.reset();
-        });
-    </script>
 </body>
 </html>
