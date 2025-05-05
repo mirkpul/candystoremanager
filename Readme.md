@@ -1,0 +1,1 @@
+Questo progetto è un sistema di gestione del magazzino di un negozio di caramelle
