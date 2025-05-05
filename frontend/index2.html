@@ -1,0 +1,32 @@
+<html>
+
+<body>
+
+    <h1>Candy Store Manager</h1>
+    <h2>Gestione Magazzino</h2>
+    <form id="addCandyForm">
+        <div class="form-group">
+            <label for="candyName">Nome Caramella</label>
+            <input type="text" id="candyName" name="candyName" required>
+        </div>
+        <div class="form-group">
+            <label for="candyQuantity">Quantità</label>
+            <input type="number" id="candyQuantity" name="candyQuantity" required>
+        </div>
+        <button type="submit" class="btn">Aggiungi</button>
+    </form>
+    <h3>Inventario</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Caramella</th>
+                <th>Quantità</th>
+                <th>Azioni</th>
+            </tr>
+        </thead>
+        <tbody id="inventoryTable">
+            <!-- Le righe verranno aggiunte dinamicamente -->
+        </tbody>
+    </table>
+</body>
+</html>
